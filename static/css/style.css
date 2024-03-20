@@ -1,0 +1,227 @@
+html {
+    /* jump to section  */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #6c757d !important;
+    text-align: center !important;
+    color: #f8f9fa !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a:hover {
+ cursor:pointer;
+}
+
+.not-visible {
+    display: none;
+}
+
+/* footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    margin-top: auto;
+}
+
+/* navbar */
+.nav {
+    background-color: #343a40;
+    color: black;
+}
+
+.link {
+    color: white;
+}
+
+.link:hover {
+    color: #17a2b8;
+}
+
+.nav-info {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.info {
+    padding: 6px 10px;
+    color: #6c757d;
+}
+
+.nav-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+/* button icons */
+.btn-icon {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+}
+
+/* back button */
+.btn-back {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+/* button padding */
+.pad-btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* multi-uses */
+.title {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #6c757d;
+}
+
+.textbox {
+    background-color: #343a40 !important;
+    color: white !important;
+    border: solid #6c757d 1px !important;
+}
+
+.textbox-ip {
+    background-color: #343a40 !important;
+    color: white !important;
+    border: solid #6c757d 1px !important;
+    margin-bottom: 10px;
+    max-width: 10vh;
+    display: inline-block;
+}
+
+.card-accordion {
+    background-color: #343a40 !important;
+    border: 1px solid #6c757d !important;
+    color: white !important;
+}
+
+
+/* login */
+.form-login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 100px auto 0;
+}
+
+.form-login .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-login .form-control:focus {
+    z-index: 2;
+}
+
+.form-login input[type="text"] {
+    margin-bottom: -1px;
+    padding: 10px;
+    width: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-login input[type="password"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+/* logout page */
+.logout {
+    padding: 100px;
+}
+
+/* jumbotron */
+.jumbo {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: -25px;
+}
+
+/* index page */
+.signup {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.feature {
+    max-width: 300px;
+    width: 300px;
+    min-width: 300px;
+}
+
+/* widgets */
+.widget {
+    background-color: #343a40;
+    border-radius: 5px;
+    min-height: auto;
+}
+
+.widgets-grid {
+    padding: 10px;
+    min-height: 100%;
+}
+
+.widget-add {
+    background-color: #343a40;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-custom {
+    /* bg-dark text-light p-2 mb-3 */
+    background-color: #343a40 !important;
+    color: white !important;
+    border: solid #6c757d 1px !important;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* modals */
+.modal-custom {
+    background-color: #343a40 !important;
+    color: white !important;
+    text-align: left !important;
+}
+
+/* interface page */
+.status {
+    margin-left: 5px;
+    padding-top: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
