@@ -1,0 +1,144 @@
+{% include "header.html" %}
+
+<body>
+
+{% include "navbar.html" %}
+
+<!-- Main -->
+<main class="main">
+
+    <div class="p-3" id="alert-div">
+        <!-- Alert Response Message -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mb-0 alert-dismissible fade show alert {% if message.tags %}alert-{{ message.tags }}{% endif %}"
+                     role="alert">{{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                            onclick="alert_onclick()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="jumbotron jumbotron-fluid mb-0 card" style="background-color: #1c1f22">
+        <div class="container" style="min-width: 100%">
+            <div class="row mb-5">
+                <div class="col">
+                    <h1>Network Configuration & Management Tool</h1>
+                    <h4 class="text-info">Manage & configure your network devices with ease</h4>
+                </div>
+            </div>
+            <div class="row align-content-center">
+                <div class="col jumbo" style="height: 100%;">
+                    <p style="display:inline; font-size: 24px" class="text-info">Cisco Admin </p>
+                    <p style="display:inline; font-size: 24px">simplifies the process of configuring and managing<br>
+                        your Cisco devices. It's an easy to use tool for faster network<br>
+                        configuration and improved network monitoring.<br>
+                    </p>
+                    <label class="m-4 text-info" style="font-size: 20px">Don't have an account?</label><br>
+                    <a class="btn-lg btn-success nav-btn" href="#signup" title="Sign Up">Sign Up Today!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid mb-0 card text-dark">
+        <div class="container p-4" style="min-width: 100%">
+            <div class="row justify-content-center">
+                <div class="col mr-5" style="max-width: 350px">
+                    <h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                             class="bi bi-server" viewBox="0 0 16 16">
+                            <path d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4V2.667z"></path>
+                            <path d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334c-.43.32-.931.58-1.458.79C11.81 7.684 9.967 8 8 8c-1.967 0-3.81-.317-5.21-.876a6.508 6.508 0 0 1-1.457-.79z"></path>
+                            <path d="M14.667 11.668c-.43.319-.931.578-1.458.789-1.4.56-3.242.876-5.209.876-1.967 0-3.81-.316-5.21-.876a6.51 6.51 0 0 1-1.457-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"></path>
+                        </svg>
+                    </h1>
+                    <h4>Device Management</h4>
+                    <p>
+                        Manage and configure all your network devices from one location without need for the command
+                        line. Cisco Admin allows you to connect to your devices, retrieve device information and send
+                        configuration.
+                    </p>
+                </div>
+                <div class="col ml-5 mr-5" style="max-width: 350px">
+                    <h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                             class="bi bi-key-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                        </svg>
+                    </h1>
+                    <h4>Secure Connections</h4>
+                    <p>
+                        This service utilises the Netmiko SSH library to establish secure connections to your devices.
+                        Information is polled from each device periodically using the established SSH connection to the
+                        network device.
+                    </p>
+                </div>
+                <div class="col ml-5 mr-5" style="max-width: 350px">
+                    <h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                             class="bi bi-cloud-fill" viewBox="0 0 16 16">
+                            <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"></path>
+                        </svg>
+                    </h1>
+                    <h4>Cloud Backups</h4>
+                    <p>
+                        Backup your device configuration with the quick and easy cloud backup system.
+                        The service can store configuration backups for all your network devices which can be easily
+                        downloaded using the GUI.
+                    </p>
+                </div>
+                <div class="col ml-5" style="max-width: 350px">
+                    <h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                             class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
+                            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1h-4z"></path>
+                        </svg>
+                    </h1>
+                    <h4>Audit Trail</h4>
+                    <p>
+                        Keep track of device configuration changes in realtime and mitigate unauthorised configuration
+                        changes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if user.is_authenticated %}
+    {% else %}
+        <div class="jumbotron jumbotron-fluid mb-0 card" id="signup" style="background-color: #1c1f22">
+            <div class="container" style="min-width: 100%">
+                <h3>Create an account for free</h3>
+                <div class="row justify-content-center mt-4">
+                    <div class="col" style="height: 100%; max-width: 750px">
+                        <div class="card signup">
+                            <form class="form-group text-left text-secondary" method="post">
+                                {% csrf_token %}
+                                {% load crispy_forms_tags %}
+                                {{ form|crispy }}
+                                <button type="submit" class="btn btn-success btn-block" title="Signup">Sign Up!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+</main>
+
+<script>
+    function alert_onclick() {
+        document.getElementById('alert-div').remove()
+    }
+</script>
+
+
+{% include "footer.html" %}
+</body>
+</html>
+
